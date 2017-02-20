@@ -1,0 +1,25 @@
+#wrapper{
+
+}
+
+.title{
+	text-align: center;
+	color: white;
+	background-color: black;
+}
+
+ul {
+    border: 1px solid #e7e7e7;
+    background-color: #f3f3f3;
+	text-align: center;
+	list-style-type: none;
+}
+
+
+li a {
+    color: #666;
+}
+
+aside{
+	float: left;
+}
