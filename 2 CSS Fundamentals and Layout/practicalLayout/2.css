@@ -1,0 +1,17 @@
+.box1{
+	position: absolute;	
+	width: 35%;
+	height: 60%;
+	top: 10%;
+	left: 35%;
+	background-color: yellow;	
+}
+
+.innerBox{
+	position: absolute;	
+	width: 8%;
+	height: 10%;
+	top: 1%;
+	left: 91%;
+	background-color: blue;			
+}

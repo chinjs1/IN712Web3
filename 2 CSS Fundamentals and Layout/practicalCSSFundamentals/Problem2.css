@@ -1,0 +1,10 @@
+li{
+	background-image: url(images/checkmark.png);
+	background-repeat: no-repeat;
+	padding-left: 50px;
+	line-height: 200%;
+}
+
+ul{
+	list-style-type:none
+}
