@@ -1,0 +1,8 @@
+extends layout
+
+block content
+	h1= title
+	ul
+		each scientist in scientistList.scientists
+			li: a(href="/scientist/#{scientist.lastname.toLowerCase()}") #{scientist.firstname} #{scientist.lastname}
+	a(href="#{addScientistLink}") #{addScientist}

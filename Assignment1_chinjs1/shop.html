@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<!-- 
+ =====================================================================================================================================
+ || * Author: Joshua Chin																											||
+ || * Project file name: shop.html																									||
+ || * Date: 30th March 2017                                                                                                         ||
+ || * Purpose: Web 3, Assignment 1.                                                                                                 ||
+ || * Description: This file is for setting up the HTML main page which users will see. 											||
+ || * It has external CSS and JS functionallity.																					||
+ ||																																	||
+ =====================================================================================================================================
+-->
+<html>
+<head>
+<title>Assignment 1 - JavaScript</title>
+<meta charset="utf-8"> 
+<link href="styleSheet.css" rel="stylesheet" type="text/css" />
+<script src="script.js"></script>
+
+</head>
+
+<body>
+<div id="wrapper">
+  <div id="header">
+	<div id="navbar"> 
+	  <li><a href="">Contact</a></li>
+	  <li><a href="">Shop</a></li>
+	  <li><a href="">Process</a></li>
+	  <li><a href="">About</a></li>
+	  <li><a href="">Home</a></li>
+	</div>
+  <img src="images/wine.png" width="190" height="200"/>
+  <img src="images/separator.png" width="700" height="100"/>
+  </div>
+  
+  <div id="mainContent">
+  <form name="purchaseContent" id="wineForm">
+  <section>
+  
+  <!--
+  ============================================= PINOT NOIR =============================================
+  -->
+  <article>
+  <h2>Pinot Noir</h2>
+  <p class="grayText">
+  Pinot Noir is a dry light-bodied first widely planted in France. The wines always lead with higher acid and soft tannins.
+  </p>
+  
+  <p class="noMargin">
+  Price: $10/bottle
+  </p>
+  <label for="pinotAmount">Quantity desired:</label>
+  <input type="text" name="wine" id="pinotAmount" size="5" placeholder="0">
+  </article>
+  
+  <!--
+  ============================================= CHARDONAY =============================================
+  -->
+  
+  <article>
+  <h2>Chardonay</h2>
+  <p class="grayText">
+  Chardonnay is a dry full-bodied white wine that was planted in large quantities for the first time in France. When oak-aged,
+  Chardonnay will have spicy, bourbon-y notes. Unoaked wines are lighter and zesty with apple and citrus flavors. Chardonnay is the white grape of Burgundy.
+  </p>
+  
+  <p class="noMargin">
+  Price: $8/bottle
+  </p>
+  <label for="chardonayAmount">Quantity desired:</label>
+  <input type="text" name="wine" id="chardonayAmount" size="5" placeholder="0">
+  </article>
+  
+  <!--
+  ============================================= SAUVIGNON BLANC =============================================
+  -->
+  
+  <article>
+  <h2>Sauvigon Blanc</h2>
+  <p class="grayText">
+  Sauvignon Blanc is a dry white grape first widely planted in France. Wines are tart, typically with herbal green fruit flavors. Sauvignon Blanc is a parent
+  grape of Cabernet Sauvignon.
+  </p>
+  
+  <p class="noMargin">
+  Price: $10/bottle
+  </p>
+  <label for="sauvignonAmount">Quantity desired:</label>
+  <input type="text" name="wine" id="sauvignonAmount" size="5" placeholder="0">
+  </article>
+  
+   <!--
+  ============================================= REISLING =============================================
+   -->
+  
+  <article>
+  <h2>Reisling</h2>
+  <p class="grayText">
+  Always very high in acid, when made as a table wine Rieslings can be harmoniously sweet (sweet and sour) or dry (very acidic). The wine is polarizing
+  because some people find dry styles too acidic and sweet styles too cloying, but sweetness is always a wine making decision and not inherent to the grape.
+  </p>
+  
+  <p class="noMargin">
+  Price: $12/bottle
+  </p>
+  <label for="reislingAmount">Quantity desired:</label>
+  <input type="text" name="wine" id="reislingAmount" size="5" placeholder="0">
+  </article>
+  
+  </section>
+  
+  <!--
+  ============================================= SHIPPING & TAXES =============================================
+  -->
+  
+  <h2>Shipping and Taxes</h2>
+  <label for="state">State:</label>
+	<select id="selectStateOption">
+	  <option value="noSelect">Select</option>
+	  <option value="Auckland">Auckland (10%)</option>
+	  <option value="Waikato">Waikato (5%)</option>
+	  <option value="Otago">Otago (no tax)</option>
+	  <option value="Southland">Southland (no tax)</option>
+	  <option value="Canterbury">Canterbury (no tax)</option>
+	</select></br>
+
+  <!--
+  ============================================= SHIPPING METHOD =============================================
+  -->
+  
+  <label for="shippingMethod">Shipping Method:</label></br>
+  <input type="radio" id="free" name="shipping" value="pickup" checked> Pickup (free)<br>
+  <input type="radio" id="nzPost" name="shipping" value="post"> NZ Post ($2/bottle)<br>
+  <input type="radio" id="nzCourier" name="shipping" value="courier"> NZ Couriers ($3/bottle)
+  
+  <!--
+  ============================================= CONTACT DETAILS =============================================
+  -->
+  
+  <h2>Contact Details</h2>
+  <label for="email">email:</label></br>
+  <input type="text" id="email" size="15" placeholder=""></br></br>
+  
+  <label for="estimateTheTotal">Click to estimate:</label></br>
+  <input type="button" value="Estimate Total" id="estimateTotal">
+  <input type="text" id="total" size="15" placeholder="$0.00"></br>
+  
+  <!--
+  ========================================= OUTPUT THE USER RESULTS  =========================================
+  -->
+  <div id="showResults">
+  <p id="outputBottles"></p></br>
+  <p id="outputShipping"></p></br>
+  <p id="outputTax"></p></br>
+  <p id = "outputTaxPercentage"></p></br>
+  </div></br>
+  <!--
+  ================================================ ANIMATION  ================================================
+  -->
+  
+  <canvas id="animation" width="325" height="200">
+  </canvas>
+  
+  </form> <!-- end form -->
+
+  </div> <!-- end mainContent -->
+
+		
+  <!--
+  ============================================== SIDEBAR INFO  ===============================================
+  --> 
+  
+  <div class="sideColumn">
+  <img src="images/fine_wine_1.png" width="240px"/>
+	<p class="changeFont">	
+	Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, 
+	eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+	</p>
+	
+	<p class="changeFont">
+	Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, 
+	eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+	</p>
+	
+	<p class="changeFont">
+	Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, 
+	eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+	</p>
+	
+	<p class="changeFont">
+	Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, 
+	eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+	</p>
+	
+  <img src="images/Red-Wine-vs-White-Wine.jpg" width="200px"/>
+  </div> <!-- end sideColumn -->
+  
+</div> <!-- end wrapper -->
+</body>
+</html>

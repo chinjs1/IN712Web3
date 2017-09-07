@@ -1,0 +1,10 @@
+extends layout
+
+block content
+	h1 Thank You!
+	p Thanks for your contribution. We have added it to our list of famous scientists.
+	p Here is a copy of your suggestion for your records.
+	h2 Scientist name: #{firstname} #{lastname}
+	h2 Bio
+	p= bio
+	p: a(href="/scientists") Return to the scientist list

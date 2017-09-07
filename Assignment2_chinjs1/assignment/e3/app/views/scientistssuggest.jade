@@ -1,0 +1,30 @@
+extends layout
+
+block content
+	form(method="post", name="suggest-form")
+		label Scientist First Name
+		br
+		input(type="text", name="firstname")
+		br
+		br
+		label Scientist Last Name
+		br
+		input(type="text", name="lastname")
+		br
+		br
+		label Years
+		br
+		input(type="text", name="years")
+		br
+		br
+		label Pic URL
+		br
+		input(type="text", name="imageurl")
+		br
+		br
+		label Bio
+		br
+		textarea(name="bio",cols="40",rows="8")
+		br
+		br
+		input(type="submit", name="submit")

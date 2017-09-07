@@ -1,0 +1,9 @@
+extends layout
+
+block content
+	h1 #{scientist.firstname} #{scientist.lastname}
+	h2= scientist.years
+	img(src="#{scientist.imageurl}")
+	h2 Bio
+	p= scientist.bio
+	p: a(href="/scientists") Return to the scientist list

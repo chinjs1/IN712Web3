@@ -1,0 +1,26 @@
+html, body {
+    height: 100%;
+}
+
+body, h1 {
+    margin: 10px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    text-align: center;
+    color: navy;
+}
+
+figcaption {
+    font-size: 1.5em;
+    font-family: cursive;
+	font-size: 0.8em;
+    color: #001125;
+}
+
